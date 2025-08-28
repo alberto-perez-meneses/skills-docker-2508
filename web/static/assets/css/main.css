@@ -1,0 +1,153 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Aquí comienza el estilo del body*/
+/* mejor comentario */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER - Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #333;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+ color: #007bff;
+}
+
+/* HERO SECTION - Grid */
+.hero {
+    align-items: center;
+    padding: 4rem 5%;
+    gap: 2rem;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.hero-image img:hover {
+    /* azul y verde corregir el scale, debe ser 1.2*/
+    transform: scale(1.1);
+    transition: transform 0.3s;
+
+}
+
+/* FEATURES - Grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+/* TESTIMONIALS - Flexbox */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 5%;
+    background: #f4f4f4;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.testimonial-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* FOOTER - Grid */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 2rem 5%;
+    background: #333;
+    color: white;
+}
+
+.footer-links {
+    /* rojo y amarillo corregir el display, debe ser flex crear sus PR's*/
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.logo img{
+  max-height: 80px;
+}
+
+.btn {
+    background: #FFF;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+
+/* RESPONSIVE - Media Queries */
+@media (max-width: 1200px) {
+    /* rojo agregar .footer grid-template-columns: 2fr; */
+
+    /* azul agregar .logo img con 60px*/
+
+    /*verde agregar .features con 2fr; grid-template-columns: 2fr; */
+
+    /* amarillo agregar .hero-image img con 90% */
+}
+
+/* RESPONSIVE - Media Queries */
+@media (max-width: 700px) {
+    /* rojo agregar .footer grid-template-columns: 1fr; */
+
+    /* azul agregar .logo img con 60px*/
+
+    /*verde agregar .features con 1fr; grid-template-columns: 1fr; */
+
+    /* amarillo agregar .hero-image img con 100% */
+}
