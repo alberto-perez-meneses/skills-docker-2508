@@ -1,0 +1,22 @@
+services:
+  api:
+    build: ./api
+    ports: 
+      - "4000:4000"
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=${DB_HOST}:3306
+
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
